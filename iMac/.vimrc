@@ -1,7 +1,7 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" Show Line Number
+" Show Lines Number
 set nu!
 
 " set the runtime path to include Vundle and initialize
