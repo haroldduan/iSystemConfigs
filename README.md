@@ -4,6 +4,8 @@
 ## iMac Configurations 
    ***Vim's Configurations***
    
+   ***Zsh's Configurations***
+
    ***Host Configurations***
 
 ## iLinux Configurations 🐧

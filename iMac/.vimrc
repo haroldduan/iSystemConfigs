@@ -1,7 +1,7 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" Show Lines Number
+" Show Line Number
 set nu!
 
 " set the runtime path to include Vundle and initialize
@@ -28,11 +28,13 @@ Bundle 'vim-syntastic/syntastic'
 " Vim plugin that displays tags in a window, ordered by scope
 Bundle 'majutsushi/tagbar'
 " precision colorscheme for the vim text editor
-Bundle 'altercation/vim-colors-solarized'
+" Bundle 'altercation/vim-colors-solarized'
 " Fuzzy file, buffer, mru, tag, etc finder
 Bundle 'kien/ctrlp.vim'
 " Hexo vim plugin
 " Bundle 'hiphopcoders/hexo.vim'
+" Vim's Dracula theme
+Plugin 'dracula/vim'
 
 call vundle#end()
 filetype indent plugin on
@@ -92,8 +94,11 @@ let g:Powerline_stl_path_style = 'full'
 " call Pl#Theme#ReplaceSegment('scrollpercent', 'fileinfo')
  
 " Plugin [vim-colors-solarized]'s configurations
-syntax enable
-set background=light
-colorscheme solarized
+" syntax enable
+" set background=dark
+" colorscheme solarized
 
+" Plugin [dracula/vim]'s configurations
+syntax on
+color dracula
 " *****************************************************************************
