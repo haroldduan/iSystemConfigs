@@ -3655,3 +3655,4 @@ ff02::2 ip6-allrouters
 # TFS End
 # Modified hosts end
 
+127.0.0.1 mac-harold # added by Apache Friends XAMPP
