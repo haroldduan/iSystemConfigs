@@ -66,4 +66,5 @@ set editor = "vim"
 set index_format = "%4C %Z [%{%y-%m-%d %H:%M}] [%X] %-15.15L (%4c) %s"
 
 # use solarized color theme
-source ~/.mutt/mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc
+#source ~/.mutt/mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc
+source ~/.mutt/mutt-colors-dracula/dracula.muttrc
