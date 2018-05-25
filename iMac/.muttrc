@@ -1,0 +1,69 @@
+# mutt config
+# set send address and user
+set from = "harold.duan@avatech.com.cn"
+set realname = "Harold.Duan" 
+set use_from = yes
+
+# set account and password
+set imap_user = "harold.duan@avatech.com.cn" 
+set imap_pass = "WdmcAbib19870920" 
+#set smtp_url = "smtp://smtp.mxhichina.com:465/"
+#set smtp_pass = "WdmcAbin19870920" 
+#set ssl_starttls = yes
+#set smtp_authenticators = 'gssapi:login'
+# use msmtp
+set sendmail = "/usr/local/bin/msmtp"
+
+# set folder
+set folder = "imaps://imap.mxhichina.com:993"
+set spoolfile = "+Inbox"
+# Add mailboxes
+#mailboxes Mailbox sent-mail
+set postponed = "+Drafts"
+set record = "+Sent"
+
+# access mutt auto create connection
+unset imap_passive
+
+# set keppalive time 
+set imap_keepalive = 300
+
+# set interval
+set mail_check = 120
+
+# set local cache
+set header_cache = ~/.mutt/cache/headers
+set message_cachedir = ~/.mutt/cache/bodies
+
+# set TLS access
+set certificate_file = ~/.mutt/certificates
+# set quit alter
+set quit = ask-yes
+set include
+set indent_str = "> "
+#my_hdr From: harold.duan@avatech.com.cn
+
+# set email scores
+#score "~N" +4
+#score "~s 通知" +2
+#score "~D" -5
+#score "~O" +1
+#score "~s believe" -10
+#set sort
+#set sort = score
+#set sort_aux = "reverse-date-received"
+set sort = "reverse-date-received"
+set pager_stop
+set fast_reply
+set resolve = yes
+set charset = "utf-8"
+set send_charset = "us-ascii:iso-8859-1:gb18030:utf-8"
+set edit_headers = no
+set pager_index_lines = 4
+set move = no
+#set sort = "reverse-date-received"
+set editor = "vim"
+set index_format = "%4C %Z [%{%y-%m-%d %H:%M}] [%X] %-15.15L (%4c) %s"
+
+# use solarized color theme
+source ~/.mutt/mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc
