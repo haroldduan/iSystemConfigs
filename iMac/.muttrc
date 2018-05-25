@@ -6,9 +6,9 @@ set use_from = yes
 
 # set account and password
 set imap_user = "harold.duan@avatech.com.cn" 
-set imap_pass = "WdmcAbib19870920" 
+set imap_pass = "*******" 
 #set smtp_url = "smtp://smtp.mxhichina.com:465/"
-#set smtp_pass = "WdmcAbin19870920" 
+#set smtp_pass = "*******" 
 #set ssl_starttls = yes
 #set smtp_authenticators = 'gssapi:login'
 # use msmtp
