@@ -16,6 +16,9 @@
 ***Mutt Configurations***
 [Mutt](./iMac/.muttrc 'Mutt')
 [Msmtp](./iMac/.msmtprc 'Msmtp')
+[Getmail](./iMac/.getmailrc 'Getmail')
+[Fetchmail](./iMac/.fetchmailrc 'Fetchmail')
+[Procmail](./iMac/.procmailrc 'Procmail')
 
 ## iLinux Configurations 🐧
 

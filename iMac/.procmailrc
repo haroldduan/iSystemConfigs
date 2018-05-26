@@ -1,0 +1,9 @@
+PATH=/bin:/sbin:/usr/bin:/usr/sbin/:/usr/local/bin:/usr/local/sbin
+MAILDIR=$HOME/.mutt/mail
+DEFAULT=$MAILDIR/inbox/new
+VERBOSE=off
+LOGFILE=~/.mutt/procmail.log
+ 
+:0
+* .*
+inbox

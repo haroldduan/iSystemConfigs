@@ -1,0 +1,15 @@
+[retriever]
+type = SimplePOP3SSLRetriever  
+server = pop3.mxhichina.com 
+port = 995  
+username = harold.duan@avatech.com.cn
+password = ******* 
+  
+[destination]
+type = Maildir
+path = ~/.mutt/mail/inbox/
+  
+[options]
+verbose = 0
+delete = false
+message_log = ~/.getmail/getmail.log

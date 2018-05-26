@@ -14,13 +14,24 @@ set imap_pass = "*******"
 # use msmtp
 set sendmail = "/usr/local/bin/msmtp"
 
+# set the mail headers
+my_hdr From: harold.duan@avatech.com.cn
+my_hdr Bcc: harold.duan@avatech.com.cn
+
+# set auto view html
+auto_view text/html
+
 # set folder
-set folder = "imaps://imap.mxhichina.com:993"
-set spoolfile = "+Inbox"
-# Add mailboxes
-#mailboxes Mailbox sent-mail
-set postponed = "+Drafts"
-set record = "+Sent"
+set folder = "~/.mutt/mail" 
+set mbox_type = Maildir 
+set spoolfile = "+inbox" 
+set move=yes 
+set mbox="+seen" 
+set record="+sent" 
+set postponed="+draft" 
+
+# set signature
+set signature="~/.mutt/.signature"
 
 # access mutt auto create connection
 unset imap_passive
@@ -30,6 +41,11 @@ set imap_keepalive = 300
 
 # set interval
 set mail_check = 120
+
+# set mail cap path
+set mailcap_path = ~/.mutt/mailcap
+# set temp dir
+set tmpdir = ~/.mutt/temp
 
 # set local cache
 set header_cache = ~/.mutt/cache/headers
