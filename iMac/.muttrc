@@ -116,3 +116,4 @@ macro index  <F2>  "c=sent\r"
 macro pager  <F2>  "c=sent\r"
 macro index  <F3>  "c=draft\r"
 macro pager  <F3>  "c=draft\r"
+macro attach W <save-entry><kill-line>/home/gawron/attachments/ <enter> 
