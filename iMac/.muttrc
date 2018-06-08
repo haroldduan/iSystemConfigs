@@ -4,11 +4,13 @@ set from = "harold.duan@avatech.com.cn"
 set realname = "Harold.Duan" 
 set use_from = yes
 
+#set pop_host = ""
+
 # set account and password
 set imap_user = "harold.duan@avatech.com.cn" 
-set imap_pass = "*******" 
+set imap_pass = "WdmcAbib19870920" 
 #set smtp_url = "smtp://smtp.mxhichina.com:465/"
-#set smtp_pass = "*******" 
+#set smtp_pass = "WdmcAbin19870920" 
 #set ssl_starttls = yes
 #set smtp_authenticators = 'gssapi:login'
 # use msmtp
@@ -28,7 +30,16 @@ set spoolfile = "+inbox"
 set move=yes 
 set mbox="+seen" 
 set record="+sent" 
-set postponed="+draft" 
+set postponed="+draft"
+set tmpdir="+tmp"
+mailboxes \
+$MAIL \
+=inbox \
+=junk \
+=favorite \
+=sent \
+=draft
+
 
 # set signature
 set signature="~/.mutt/.signature"
@@ -55,7 +66,7 @@ set message_cachedir = ~/.mutt/cache/bodies
 set certificate_file = ~/.mutt/certificates
 # set quit alter
 set quit = ask-yes
-set include
+#set include
 set indent_str = "> "
 #my_hdr From: harold.duan@avatech.com.cn
 
@@ -84,3 +95,24 @@ set index_format = "%4C %Z [%{%y-%m-%d %H:%M}] [%X] %-15.15L (%4c) %s"
 # use solarized color theme
 #source ~/.mutt/mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc
 source ~/.mutt/mutt-colors-dracula/dracula.muttrc
+
+#key binding getmail
+macro index    G "!~/.getmail/getmail\n"   "Start Getmail"
+macro pager    G "!~/.getmail/getmail\n"   "Start Getmail"
+
+#attachments settings
+set rfc2047_parameters=yes
+
+#enter mailbox
+#macro index  A  "c=archive\r"
+#macro pager  A  "c=archive\r"
+macro index  I  "c!\n" "Go to Inbox"
+macro pager  I  "c!\n" "Go to Inbox"
+macro index  F    "c=favorites\r"
+macro pager  F    "c=favorites\r"
+macro index  J  "c=junk\r"
+macro pager  J  "c=junk\r"
+macro index  <F2>  "c=sent\r"
+macro pager  <F2>  "c=sent\r"
+macro index  <F3>  "c=draft\r"
+macro pager  <F3>  "c=draft\r"
