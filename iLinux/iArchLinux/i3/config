@@ -122,28 +122,66 @@ set $ws9 "9"
 set $ws10 "10"
 
 # switch to workspace
-bindsym $mod+1 workspace number $ws1
-bindsym $mod+2 workspace number $ws2
-bindsym $mod+3 workspace number $ws3
-bindsym $mod+4 workspace number $ws4
-bindsym $mod+5 workspace number $ws5
-bindsym $mod+6 workspace number $ws6
-bindsym $mod+7 workspace number $ws7
-bindsym $mod+8 workspace number $ws8
-bindsym $mod+9 workspace number $ws9
-bindsym $mod+0 workspace number $ws10
+# bindsym $mod+1 workspace number $ws1
+# bindsym $mod+2 workspace number $ws2
+# bindsym $mod+3 workspace number $ws3
+# bindsym $mod+4 workspace number $ws4
+# bindsym $mod+5 workspace number $ws5
+# bindsym $mod+6 workspace number $ws6
+# bindsym $mod+7 workspace number $ws7
+# bindsym $mod+8 workspace number $ws8
+# bindsym $mod+9 workspace number $ws9
+# bindsym $mod+0 workspace number $ws10
+bindsym $mod+1 workspace 1:Info
+bindsym $mod+2 workspace 2:Web
+bindsym $mod+3 workspace 3:Work
+bindsym $mod+4 workspace 4:Dev
+bindsym $mod+5 workspace 5:Work
+bindsym $mod+6 workspace 6:Work
+bindsym $mod+7 workspace 7:Work
+bindsym $mod+8 workspace 8:Other
+bindsym $mod+9 workspace 9:Other
+bindsym $mod+0 workspace 10:Other
+
+# Setting workspace show screen monitor /*Harold.Duan*/
+workspace "1:Info" output LVDS1
+workspace "2:Web" output VGA1
+workspace "3:Work" output VGA1
+workspace "4:Dev" output VGA1
+workspace "5:Work" output VGA1
+workspace "6:Work" output VGA1
+workspace "7:Work" output VGA1
+workspace "8:Other" output VGA1
+workspace "9:Other" output VGA1
+workspace "10:Other" output VGA1
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace number $ws1
-bindsym $mod+Shift+2 move container to workspace number $ws2
-bindsym $mod+Shift+3 move container to workspace number $ws3
-bindsym $mod+Shift+4 move container to workspace number $ws4
-bindsym $mod+Shift+5 move container to workspace number $ws5
-bindsym $mod+Shift+6 move container to workspace number $ws6
-bindsym $mod+Shift+7 move container to workspace number $ws7
-bindsym $mod+Shift+8 move container to workspace number $ws8
-bindsym $mod+Shift+9 move container to workspace number $ws9
-bindsym $mod+Shift+0 move container to workspace number $ws10
+# bindsym $mod+Shift+1 move container to workspace number $ws1
+# bindsym $mod+Shift+2 move container to workspace number $ws2
+# bindsym $mod+Shift+3 move container to workspace number $ws3
+# bindsym $mod+Shift+4 move container to workspace number $ws4
+# bindsym $mod+Shift+5 move container to workspace number $ws5
+# bindsym $mod+Shift+6 move container to workspace number $ws6
+# bindsym $mod+Shift+7 move container to workspace number $ws7
+# bindsym $mod+Shift+8 move container to workspace number $ws8
+# bindsym $mod+Shift+9 move container to workspace number $ws9
+# bindsym $mod+Shift+0 move container to workspace number $ws10
+bindsym $mod+Shift+1 move container to workspace 1:Info
+bindsym $mod+Shift+2 move container to workspace 2:Web
+bindsym $mod+Shift+3 move container to workspace 3:Work
+bindsym $mod+Shift+4 move container to workspace 4:Dev
+bindsym $mod+Shift+5 move container to workspace 5:Work
+bindsym $mod+Shift+6 move container to workspace 6:Work
+bindsym $mod+Shift+7 move container to workspace 7:Work
+bindsym $mod+Shift+8 move container to workspace 8:Other
+bindsym $mod+Shift+9 move container to workspace 9:Other
+bindsym $mod+Shift+0 move container to workspace 10:Other
+
+# Workspace's default program /*Harold.Duan*/
+assign [class="firefox"] 2:Web
+assign [class="mate-terminal"] 3:Work
+assign [class="code"] 4:Dev
+# assign [class="VirtualBox"] 9:Other
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
