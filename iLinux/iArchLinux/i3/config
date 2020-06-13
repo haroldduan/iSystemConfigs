@@ -204,14 +204,14 @@ exec --no-startup-id compton -b
 
 # Keyboard shortcuts
 # System command
-# set $mode_system  Logout(O) Shutdown(S) Reboot(R) Cancel(Esc)
-# bindsym $mod+shift+t mode "$mode_system"
-# mode "$mode_system" {
-    # bindsym o exec i3-msg exit
-    # bindsym s exec systemctl poweroff
-    # bindsym r exec systemctl reboot
-    # bindsym Escape mode "default"
-    # }
+set $mode_system  Logout(O) Shutdown(S) Reboot(R) Cancel(Esc)
+bindsym $mod+shift+t mode "$mode_system"
+mode "$mode_system" {
+    bindsym o exec i3-msg exit
+    bindsym s exec systemctl poweroff
+    bindsym r exec systemctl reboot
+    bindsym Escape mode "default"
+    }
 
 # Lock screen setting
 # bindsym Mod4+l exec --no-startup-id "convert -scale $(xdpyinfo | grep dimensions | cut -d\ -f7 | cut -dx -f1) ~/Pictures/Backgrounds/Linux.png /tmp/lockscreen.png && i3lock -i /tmp/lockscreen.png"
