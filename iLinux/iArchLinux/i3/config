@@ -120,68 +120,88 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+# set $ws1 "Info"
+# set $ws2 "work"
+# set $ws3 "Web"
+# set $ws4 "Dev"
+# set $ws5 "5"
+# set $ws6 "6"
+# set $ws7 "7"
+# set $ws8 "8"
+# set $ws9 "Virt"
+# set $ws10 "10"
 
 # switch to workspace
-# bindsym $mod+1 workspace number $ws1
-# bindsym $mod+2 workspace number $ws2
-# bindsym $mod+3 workspace number $ws3
-# bindsym $mod+4 workspace number $ws4
-# bindsym $mod+5 workspace number $ws5
-# bindsym $mod+6 workspace number $ws6
-# bindsym $mod+7 workspace number $ws7
-# bindsym $mod+8 workspace number $ws8
-# bindsym $mod+9 workspace number $ws9
-# bindsym $mod+0 workspace number $ws10
-bindsym $mod+1 workspace 1:Info
-bindsym $mod+2 workspace 2:Web
-bindsym $mod+3 workspace 3:Work
-bindsym $mod+4 workspace 4:Dev
-bindsym $mod+5 workspace 5:Work
-bindsym $mod+6 workspace 6:Work
-bindsym $mod+7 workspace 7:Work
-bindsym $mod+8 workspace 8:Other
-bindsym $mod+9 workspace 9:Other
-bindsym $mod+0 workspace 10:Other
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+# bindsym $mod+1 workspace 1:Info
+# bindsym $mod+2 workspace 2:Work
+# bindsym $mod+3 workspace 3:Web
+# bindsym $mod+4 workspace 4:Dev
+# bindsym $mod+5 workspace 5:Work
+# bindsym $mod+6 workspace 6:Work
+# bindsym $mod+7 workspace 7:Work
+# bindsym $mod+8 workspace 8:Other
+# bindsym $mod+9 workspace 9:Other
+# bindsym $mod+0 workspace 10:Other
 
 # Setting workspace show screen monitor /*Harold.Duan*/
-workspace "1:Info" output LVDS1
-workspace "2:Web" output VGA1
-workspace "3:Work" output VGA1
-workspace "4:Dev" output VGA1
-workspace "5:Work" output VGA1
-workspace "6:Work" output VGA1
-workspace "7:Work" output VGA1
-workspace "8:Other" output VGA1
-workspace "9:Other" output VGA1
-workspace "10:Other" output VGA1
+workspace $ws1 output LVDS1
+workspace $ws2 output VGA1
+workspace $ws3 output VGA1
+workspace $ws4 output VGA1
+workspace $ws5 output VGA1
+workspace $ws6 output VGA1
+workspace $ws7 output VGA1
+workspace $ws8 output VGA1
+workspace $ws9 output VGA1
+workspace $ws10 output VGA1
+# workspace "1:Info" output LVDS1
+# workspace "2:Work" output VGA1
+# workspace "3:Web" output VGA1
+# workspace "4:Dev" output VGA1
+# workspace "5:Work" output VGA1
+# workspace "6:Work" output VGA1
+# workspace "7:Work" output VGA1
+# workspace "8:Other" output VGA1
+# workspace "9:Other" output VGA1
+# workspace "10:Other" output VGA1
 
 # move focused container to workspace
-# bindsym $mod+Shift+1 move container to workspace number $ws1
-# bindsym $mod+Shift+2 move container to workspace number $ws2
-# bindsym $mod+Shift+3 move container to workspace number $ws3
-# bindsym $mod+Shift+4 move container to workspace number $ws4
-# bindsym $mod+Shift+5 move container to workspace number $ws5
-# bindsym $mod+Shift+6 move container to workspace number $ws6
-# bindsym $mod+Shift+7 move container to workspace number $ws7
-# bindsym $mod+Shift+8 move container to workspace number $ws8
-# bindsym $mod+Shift+9 move container to workspace number $ws9
-# bindsym $mod+Shift+0 move container to workspace number $ws10
-bindsym $mod+Shift+1 move container to workspace 1:Info
-bindsym $mod+Shift+2 move container to workspace 2:Web
-bindsym $mod+Shift+3 move container to workspace 3:Work
-bindsym $mod+Shift+4 move container to workspace 4:Dev
-bindsym $mod+Shift+5 move container to workspace 5:Work
-bindsym $mod+Shift+6 move container to workspace 6:Work
-bindsym $mod+Shift+7 move container to workspace 7:Work
-bindsym $mod+Shift+8 move container to workspace 8:Other
-bindsym $mod+Shift+9 move container to workspace 9:Other
-bindsym $mod+Shift+0 move container to workspace 10:Other
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+# bindsym $mod+Shift+1 move container to workspace 1:Info
+# bindsym $mod+Shift+2 move container to workspace 2:Work
+# bindsym $mod+Shift+3 move container to workspace 3:Web
+# bindsym $mod+Shift+4 move container to workspace 4:Dev
+# bindsym $mod+Shift+5 move container to workspace 5:Work
+# bindsym $mod+Shift+6 move container to workspace 6:Work
+# bindsym $mod+Shift+7 move container to workspace 7:Work
+# bindsym $mod+Shift+8 move container to workspace 8:Other
+# bindsym $mod+Shift+9 move container to workspace 9:Other
+# bindsym $mod+Shift+0 move container to workspace 10:Other
 
 # Workspace's default program /*Harold.Duan*/
-assign [class="firefox"] 2:Web
-assign [class="mate-terminal"] 3:Work
-assign [class="code"] 4:Dev
-# assign [class="VirtualBox"] 9:Other
+assign [class="mate-terminal"] $ws2
+assign [class="firefox"] $ws3
+assign [class="code"] $ws4
+# assign [class="VirtualBox"] $ws9
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -223,6 +243,7 @@ bindsym $mod+r mode "resize"
         # status_command i3status
 # }
 
+
 # User-defined settings
 # Mutile screen show settings
 exec --no-startup-id xrandr --output LVDS1 --primary --mode 1366x768 --pos 0x0 --rotate normal --output VGA1 --mode 1440x900 --pos 1443x0 --rotate normal --output VIRTUAL1 --off --output LVDS-1-2 --off --output VGA-1-2 --off --output DP-1-1 --off --output DP-1-2 --off --output DP-1-3 --off
@@ -238,7 +259,6 @@ exec --no-startup-id feh --randomize --bg-fill ~/Pictures/Backgrounds/ArchLinux_
 
 # Windows compton setting
 exec --no-startup-id compton -b
-
 
 # Keyboard shortcuts
 # System command
@@ -266,3 +286,13 @@ bindsym $mod+p exec flameshot gui
 
 # Monitor shortcut setting
 bindsym $mod+Shift+s exec mate-system-monitor
+
+# Startup in i3-gap start
+# autostart mate-terminal on workspace 2
+exec --no-startup-id i3-msg "workspace $ws2; exec i3-sensible-terminal; layout tabbed"
+
+# autostart firefox on workspace 3
+exec --no-startup-id i3-msg "workspace $ws3; exec firefox; layout tabbed"
+
+# autostart code on workspace 4
+exec --no-startup-id i3-msg "workspace $ws4; exec code; layout tabbed"
