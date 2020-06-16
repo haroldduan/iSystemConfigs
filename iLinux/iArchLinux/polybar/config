@@ -31,6 +31,7 @@ alert = #bd2c40
 
 [bar/mybar]
 ;monitor = ${env:MONITOR:HDMI-1}
+monitor = ${env:MONITOR:LVDS1}
 width = 100%
 height = 27
 ;offset-x = 1%
@@ -53,9 +54,19 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=10;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
+;font-0 = fixed:pixelsize=10;1
+;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+;font-2 = siji:pixelsize=10;1
+font-0 = Sans-Regular:size=10;0
+font-1 = MaterialIcons:size=10;0
+;font-2 = Siji:size=10;0
+;font-3 = Monospace:size=10;0
+;font-4 = "Font Awesome 5 Brands Regular:style=Regular:size=10;3"
+;font-5 = "Font Awesome 5 Free Solid:style=Solid:size=10;3"
+;font-6 = "Font Awesome 5 Free Regular:style=Regular:size=10;3"
+font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=12;2"
+font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=12;2"
+font-4 = "Font Awesome 5 Brands:style=Regular:pixelsize=12;2"
 
 ;modules-left = bspwm i3
 modules-left = i3 xwindow
@@ -155,23 +166,27 @@ label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
-label-focused = %index%
+;label-focused = %index%
+label-focused = %name%
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.secondary}
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %index%
+;label-unfocused = %index%
+label-unfocused = %name%
 label-unfocused-padding = 2
 
 ; visible = Active workspace on unfocused monitor
-label-visible = %index%
+;label-visible = %index%
+label-visible = %name%
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %index%
+;label-urgent = %index%
+label-urgent = %name%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
