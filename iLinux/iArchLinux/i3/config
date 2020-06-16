@@ -176,6 +176,8 @@ for_window [window_role="task_dialog"] floating enable
 # for_window [class="code"] floating enable
 # for_window [title="Preference$"] floating enable
 # for_window [title="Open$"] floating enable border pixel 1
+for_window [class="caja"] floating enable
+for_window [class="wps"] floating enable
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
