@@ -169,15 +169,16 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # Workspace's default program /*Harold.Duan*/
-assign [class="thunderbird"] $ws1
-assign [class="mate-terminal"] $ws2
+# Run command "xprop | grep WM_CLASS" to get the application's title and class
+assign [class="Thunderbird"] $ws1
+assign [class="Mate-system-monitor"] $ws2
 assign [class="firefox"] $ws3
-assign [class="code"] $ws4
-assign [class="remmina"] $ws5
-assign [class="DBeaver*"] $ws6
-assign [class="caja"] $ws8
-# assign [class="VirtualBox"] $ws9
-assign [class="mate-system-monitor"] $ws10
+assign [class="Code"] $ws4
+assign [class="org.remmina.Remmina"] $ws5
+assign [class="DBeaver"] $ws6
+assign [class="Caja"] $ws8
+# assign [class="virtualbox"] $ws9
+assign [class="Mate-system-monitor"] $ws10
 
 # Popups
 for_window [window_role="pop-up"] floating enable
@@ -272,13 +273,16 @@ bindsym $mod+Shift+s exec mate-system-monitor
 
 # Startup in i3-gap start
 # autostart thunderbird on workspace 1
-exec --no-startup-id i3-msg "workspace $ws1; exec thunderbird; layout tabbed"
+# exec --no-startup-id i3-msg "workspace $ws1; exec thunderbird; layout tabbed"
 
 # autostart mate-terminal on workspace 2
 exec --no-startup-id i3-msg "workspace $ws2; exec i3-sensible-terminal; layout tabbed"
 
 # autostart firefox on workspace 3
-exec --no-startup-id i3-msg "workspace $ws3; exec firefox; layout tabbed"
+# exec --no-startup-id i3-msg "workspace $ws3; exec firefox; layout tabbed"
 
 # autostart code on workspace 4
 # exec --no-startup-id i3-msg "workspace $ws4; exec code; layout tabbed"
+
+# autostart mate-system-monitor on workspace 10
+# exec --no-startup-id i3-msg "workspace $ws10; exec mate-system-monitor -s; layout tabbed"
