@@ -109,24 +109,26 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1  1:
-set $ws2  2:
-set $ws3  3:
-set $ws4  4:
-set $ws5  5:
-set $ws6  6:
-set $ws7  7:
-set $ws8  8:
-set $ws9  9:
-set $ws10 0:
-set $ws1 "1:"
-set $ws2 "2:"
-set $ws3 "3:"
-set $ws4 "4:"
-set $ws5 "5:"
-set $ws10 "10:"
-
-# i3-msg -t $ws1
+# mail
+set $ws1 ""
+# terminal
+set $ws2 ""
+# firefox/chrome
+set $ws3 ""
+# code
+set $ws4 ""
+# remmina
+set $ws5 ""
+# database
+set $ws6 ""
+# chat
+set $ws7 ""
+# folder
+set $ws8 ""
+# virtualbox
+set $ws9 ""
+# systeminfo
+set $ws10 ""
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -152,7 +154,7 @@ workspace $ws6 output VGA1
 workspace $ws7 output VGA1
 workspace $ws8 output VGA1
 workspace $ws9 output VGA1
-workspace $ws10 output VGA1
+workspace $ws10 output LVDS1
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -172,7 +174,10 @@ assign [class="mate-terminal"] $ws2
 assign [class="firefox"] $ws3
 assign [class="code"] $ws4
 assign [class="remmina"] $ws5
+assign [class="DBeaver*"] $ws6
+assign [class="caja"] $ws8
 # assign [class="VirtualBox"] $ws9
+assign [class="mate-system-monitor"] $ws10
 
 # Popups
 for_window [window_role="pop-up"] floating enable
@@ -266,6 +271,9 @@ bindsym $mod+p exec flameshot gui
 bindsym $mod+Shift+s exec mate-system-monitor
 
 # Startup in i3-gap start
+# autostart thunderbird on workspace 1
+exec --no-startup-id i3-msg "workspace $ws1; exec thunderbird; layout tabbed"
+
 # autostart mate-terminal on workspace 2
 exec --no-startup-id i3-msg "workspace $ws2; exec i3-sensible-terminal; layout tabbed"
 
