@@ -171,7 +171,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # Workspace's default program /*Harold.Duan*/
 # Run command "xprop | grep WM_CLASS" to get the application's title and class
 assign [class="Thunderbird"] $ws1
-assign [class="Mate-system-monitor"] $ws2
+assign [class="Mate-terminal"] $ws2
 assign [class="firefox"] $ws3
 assign [class="Code"] $ws4
 assign [class="org.remmina.Remmina"] $ws5
