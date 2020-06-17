@@ -75,7 +75,7 @@ modules-left = i3 xwindow
 ;modules-center = mpd
 ;Menus sorting
 ;modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
-modules-right = alsa eth memory cpu date battery
+modules-right = alsa eth memory cpu date battery mail
 
 tray-position = right
 tray-padding = 2
@@ -232,18 +232,21 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 1
-format-prefix = " "
+;format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #f90000
-label =CPU %percentage:2%%
+label = %percentage:2%%
 
 [module/memory]
 type = internal/memory
 interval = 1
-format-prefix = " "
+;format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
-label =RAM %percentage_used%%
+;label =RAM %percentage_used%%
+label = %percentage_used%%
 
 ;Wireless network device
 [module/wlan]
@@ -379,7 +382,8 @@ date-alt = " %Y-%m-%d"
 time = %H:%M
 time-alt = %H:%M:%S
 
-format-prefix = 
+;format-prefix = 
+format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #0a6cf5
 
@@ -389,10 +393,12 @@ label = %date% %time%
 type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
+;label-volume = VOL %percentage%%
+label-volume =  %percentage%%
 label-volume-foreground = ${root.foreground}
 
-label-muted = 🔇 muted
+;label-muted = 🔇 muted
+label-muted =  muted
 label-muted-foreground = #666
 
 bar-volume-width = 10
@@ -415,13 +421,17 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 [module/alsa]
 type = internal/alsa
 
-format-volume = <label-volume> <bar-volume>
+;format-volume = <label-volume> <bar-volume>
+format-volume-underline = #a100ff
+format-volume-prefix = " "
+format-volume = <bar-volume>
 label-volume = VOL
 label-volume-foreground = ${root.foreground}
 
-format-muted-prefix = " "
+format-muted-underline = #fcf9f9
+format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground-alt}
-label-muted = sound muted
+label-muted = Sound Muted
 
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55
@@ -452,24 +462,24 @@ format-charging-underline = #ffb52a
 format-discharging = <animation-discharging> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
+format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
 ramp-capacity-foreground = ${colors.foreground-alt}
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
 
-animation-discharging-0 = 
-animation-discharging-1 = 
-animation-discharging-2 = 
+animation-discharging-0 = 
+animation-discharging-1 = 
+animation-discharging-2 = 
 animation-discharging-foreground = ${colors.foreground-alt}
 animation-discharging-framerate = 750
 
@@ -534,3 +544,17 @@ margin-top = 5
 margin-bottom = 5
 
 ; vim:ft=dosini
+
+;User-defined module
+[module/mail]
+type = custom/script
+interval = 30
+format = <label>
+;📧📮📥📪
+format-prefix = ""
+label-padding = 1
+#format-prefix-foreground = ${colors.foreground-alt}
+exec = $HOME/.config/polybar/mail.py
+click-left = thunderbird &
+;format-padding = 5
+format-underline = #00ff2e
