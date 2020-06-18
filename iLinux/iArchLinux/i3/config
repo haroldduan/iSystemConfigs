@@ -292,6 +292,9 @@ bindsym $mod+Shift+v exec code
 # Thunderbird shortcut setting
 bindsym $mod+Shift+b exec thunderbird
 
+# Firefox shortcut setting
+bindsym $mod+Shift+f exec firefox
+
 # Remmina shortcut setting
 bindsym $mod+Shift+m exec remmina
 
