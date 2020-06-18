@@ -286,6 +286,15 @@ bindsym $mod+p exec flameshot gui
 # Monitor shortcut setting
 bindsym $mod+Shift+s exec mate-system-monitor
 
+# VSCode shortcut setting
+bindsym $mod+Shift+v exec code
+
+# Thunderbird shortcut setting
+bindsym $mod+Shift+f exec thunderbird
+
+# Remmina shortcut setting
+bindsym $mod+Shift+m exec remmina
+
 # Startup in i3-gap start
 # autostart thunderbird on workspace 1
 # exec --no-startup-id i3-msg "workspace $ws1; exec thunderbird; layout tabbed"
