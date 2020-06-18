@@ -170,14 +170,29 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 # Workspace's default program /*Harold.Duan*/
 # Run command "xprop | grep WM_CLASS" to get the application's title and class
+# Workspace 1
 assign [class="Thunderbird"] $ws1
+# Workspace 2
 assign [class="Mate-terminal"] $ws2
+# Workspace 3
 assign [class="firefox"] $ws3
+assign [class="Google-chrome"] $ws3
+# Workspace 4
 assign [class="Code"] $ws4
+# Workspace 5
 assign [class="org.remmina.Remmina"] $ws5
+# Workspace 6
 assign [class="DBeaver"] $ws6
+# Workspace 7
+assign [class="dingtalklinux"] $ws7
+assign [class="electronic-wechat"] $ws7
+assign [class="netease-cloud-music"] $ws7
+# Workspace 8
 assign [class="Caja"] $ws8
+assign [class="Wps"] $ws8
+# Workspace 9
 # assign [class="virtualbox"] $ws9
+# Workspace 10
 assign [class="Mate-system-monitor"] $ws10
 
 # Popups
