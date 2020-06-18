@@ -30,6 +30,31 @@
 ***Host Configurations***
 [Host](./iLinux/iUbuntu/hosts 'Host')
 
+### iLinuxMint Configurations
+
+***Tumx's configurations***
+[Vim](./iLinux/iLinuxMint/.tmux.conf 'Tmux')
+
+***Fish's configurations***
+[Vim](./iLinux/iLinuxMint/config.fish 'Fish')
+
+***VSCode's configurations***
+[Vim](./iLinux/iLinuxMint/vscode.settings.json 'VSCode')
+
+### iArchLinux Configurations
+
+***xinit's configurations***
+[Vim](./iLinux/iLinuxMint/.xinitrc 'xinit')
+
+***xresource's configurations***
+[Vim](./iLinux/iLinuxMint/.Xresources 'xresource')
+
+***i3's configurations***
+[Vim](./iLinux/iArchLinux/i3 'i3')
+
+***polybar's configurations***
+[Vim](./iLinux/iArchLinux/polybar 'polybar')
+
 ## iWindows Configurations
 
 ***Host Configurations***
