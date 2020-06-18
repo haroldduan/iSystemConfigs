@@ -28,6 +28,13 @@ client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
 client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
 client.background       #F8F8F2
 
+# set border
+# for_window [class="^.*"] border pixel 0
+# new_window pixel
+
+# gaps inner 3
+# gaps outer 7
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -187,6 +194,7 @@ assign [class="firefox"] $ws3
 assign [class="Google-chrome"] $ws3
 # Workspace 4
 assign [class="Code"] $ws4
+assign [class="Gvim"] $ws4
 # Workspace 5
 assign [class="org.remmina.Remmina"] $ws5
 # Workspace 6
@@ -296,6 +304,9 @@ bindsym $mod+Shift+s exec mate-system-monitor
 
 # VSCode shortcut setting
 bindsym $mod+Shift+v exec code
+
+# GVIM shortcut setting
+bindsym $mod+Shift+g exec gvim
 
 # Thunderbird shortcut setting
 bindsym $mod+Shift+b exec thunderbird
