@@ -8,6 +8,13 @@ set listchars=space:·
 set list
 " Change tab to sorttab,4 pics whitespace
 set shiftwidth=4 softtabstop=4 expandtab
+" set termwinkey=<C-L>
+" Open shell
+" echom len(term_list()) > 0 ? "fuck" : "shit"
+" map <expr> <C-t> len(term_list())>0 ? '<Esc> <C-w>h :term_setkill(get(term_list(),0),"kill")<cr>' : ':term<cr>'
+map <expr> <C-t> len(term_list())>0 ? '<Esc> <C-w>h :echom "Hello World"<cr>' : ':term<cr>'
+" nmap <expr> <C-t> len(term_list())>0 ? '<Esc> <C-w>h :quit!<cr>' : ':term<cr>'
+" map <C-i> '<Esc> <C-w>h :quit!'
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -23,13 +30,16 @@ Plugin 'dracula/vim'
 
 " Plugin Airline
 Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes' 
+Plugin 'vim-airline/vim-airline-themes'
 
 " Plugin NERDTree
 Plugin 'preservim/nerdtree'
 
-" Plugin NERDTree-Git
+" Plugin NERDTree-git
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+
+" Plugin Tagbar
+Plugin 'majutsushi/tagbar'
 
 " Plugin YouCompleteMe
 " Plugin 'Valloric/YouCompleteMe’
@@ -37,8 +47,17 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 " Plugin Syntastic
 Plugin 'vim-syntastic/syntastic'
 
-" Plugin Powerline
-" Plugin 'Lokaltog/vim-powerline'
+" Plugin vim-fugitive
+Plugin 'tpope/vim-fugitive'
+
+" Plugin gitgutter
+Plugin 'airblade/vim-gitgutter'
+
+" Plugin virtualenv
+" Plugin 'jmcantrell/vim-virtualenv'
+
+" Plugin python-mode
+Plugin 'python-mode/python-mode'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -119,6 +138,9 @@ let g:NERDTreeIndicatorMapCustom = {
     \ }
 let g:NERDTreeShowIgnoredStatus = 1
 
+" Plugin [Tagbar]'s configurations
+nmap <F8> :TagbarToggle<CR>
+
 " Plugin [YouCompleteMe]'s configurations
 "let g:ycm_global_ycm_extra_conf =
 "'~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
@@ -150,3 +172,40 @@ let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libstdc++'
 "let g:syntastic_warning_symbol = '⚠'
 ""whether to show balloons
 let g:syntastic_enable_balloons = 1
+
+" Plugin [Python-mode]'s configurations
+" Activate rope
+" Keys: 按键：
+" K             Show python docs 显示Python文档
+" <Ctrl-Space>  Rope autocomplete  使用Rope进行自动补全
+" <Ctrl-c>g     Rope goto definition  跳转到定义处
+" <Ctrl-c>d     Rope show documentation  显示文档
+" <Ctrl-c>f     Rope find occurrences  寻找该对象出现的地方
+" <Leader>b     Set, unset breakpoint (g:pymode_breakpoint enabled) 断点
+" [[            Jump on previous class or function (normal, visual, operator modes)
+" ]]            Jump on next class or function (normal, visual, operator modes)
+"            跳转到前一个/后一个类或函数
+" [M            Jump on previous class or method (normal, visual, operator modes)
+" ]M            Jump on next class or method (normal, visual, operator modes)
+"              跳转到前一个/后一个类或方法
+let g:pymode_rope = 1
+" Documentation 显示文档
+let g:pymode_doc = 1
+let g:pymode_doc_key = 'K'
+"Linting 代码查错，=1为启用
+let g:pymode_lint = 1
+let g:pymode_lint_checker = "pyflakes,pep8"
+" Auto check on save
+let g:pymode_lint_write = 1
+" Support virtualenv
+let g:pymode_virtualenv = 1
+" Enable breakpoints plugin
+let g:pymode_breakpoint = 1
+let g:pymode_breakpoint_bind = '<leader>b'
+" syntax highlighting 高亮形式
+let g:pymode_syntax = 1
+let g:pymode_syntax_all = 1
+let g:pymode_syntax_indent_errors = g:pymode_syntax_all
+let g:pymode_syntax_space_errors = g:pymode_syntax_all
+" Don't autofold code 禁用自动代码折叠
+let g:pymode_folding = 0
