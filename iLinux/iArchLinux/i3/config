@@ -9,9 +9,8 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-# Adapting for qutebrowser
-set $mod Mod4
-# set $mod Mod1
+# set $mod Mod4 # Adapting for qutebrowser
+set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -288,9 +287,8 @@ mode "$mode_system" {
 # Lock screen setting
 # bindsym Mod4+l exec --no-startup-id "convert -scale $(xdpyinfo | grep dimensions | cut -d\ -f7 | cut -dx -f1) ~/Pictures/Backgrounds/Linux.png /tmp/lockscreen.png && i3lock -i /tmp/lockscreen.png"
 # bindsym Mod4+l exec i3lock-fancy
-# bindsym Mod4+l exec --no-startup-id multilockscreen -l
-# Adapting for qutebrowser
-bindsym Mod4+Ctrl+l exec --no-startup-id multilockscreen -l
+# bindsym Mod4+Ctrl+l exec --no-startup-id multilockscreen -l # Adapting for qutebrowser
+bindsym Mod4+l exec --no-startup-id multilockscreen -l
 # exec_always --no-startup-id xautolock -time 1 -locker "i3lock -i ~/Pictures/Backgrounds/Linux.png"
 exec_always --no-startup-id xautolock -time 1 -locker "multilockscreen -l"
 
