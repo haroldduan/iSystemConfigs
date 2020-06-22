@@ -11,6 +11,10 @@ dracula.draw.blood(c, {
     }
 })
 
+# default page
+c.url.default_page = 'https://cn.bing.com'
+# start pages
+c.url.start_pages = ['https://cn.bing.com']
 # searchengines config
 c.url.searchengines = {
     'DEFAULT': 'https://cn.bing.com/search?q={}',
@@ -23,9 +27,9 @@ c.url.searchengines = {
     'mijisou': 'https://mijisou.com/search?q={}'
 }
 
-config.unbind("<ctrl+tab>")
-config.bind("<ctrl+tab>", "tab-next")
-config.bind("<ctrl+shift+tab>", "tab-prev")
+config.unbind('<ctrl+tab>')
+config.bind('<ctrl+tab>', 'tab-next')
+config.bind('<ctrl+shift+tab>', 'tab-prev')
 config.unbind('<Alt-1>')
 config.unbind('<Alt-2>')
 config.unbind('<Alt-3>')
