@@ -1,5 +1,20 @@
 [user]
 	name = harold.duan
 	email = duanhan0920@hotmail.com
+[color]
+	status = auto
+	diff = auto
+	branch = auto
+	interactive = auto
 [alias]
 	xlog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+	ck = checkout
+	ckb = checkout -b
+	br = branch
+	bra = branch -a
+	brd = branch -d
+	brD = branch -d
+	# nmerge = merge --no-commit
+	nmg = merge --no-commit
+[commit]
+	gpgsign = true
