@@ -13,7 +13,7 @@
 	br = branch
 	bra = branch -a
 	brd = branch -d
-	brD = branch -d
+	brD = branch -D
 	# nmerge = merge --no-commit
 	nmg = merge --no-commit
 [commit]
