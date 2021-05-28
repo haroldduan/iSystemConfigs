@@ -19,7 +19,9 @@
 	bra = branch -a
 	brd = branch -d
 	brD = branch -D
+	mg = merge
 	nmg = merge --no-commit
+	rt = remote
 	# xlog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 	# nmerge = merge --no-commit
 [commit]
