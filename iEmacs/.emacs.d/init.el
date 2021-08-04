@@ -2,7 +2,7 @@
 
 ;; set package-archives mirrors
 (setq package-archives '(("melpa" . "http://mirrors.bfsu.edu.cn/elpa/melpa/")
-                         ("gnu" . "http://mirrors.bfsu.edu.cn/elpa/gnu/")
+			 ("gnu" . "http://mirrors.bfsu.edu.cn/elpa/gnu/")
                          ("org" . "http://mirrors.bfsu.edu.cn/elpa/org/")))
 
 (setq package-check-signature nil)
@@ -22,17 +22,23 @@
   (package-refresh-contents)
   (package-install 'use-package))
 
+;; tool bar close
+(tool-bar-mode -1)
+
+;; scroll bar close
+(scroll-bar-mode -1)
+
 ;; show line number
-(global-linum-mode 1)
+(global-linum-mode t)
+
+;; highlight current line
+(global-hl-line-mode t)
 
 ;; cursor type
 (setq cursor-type 'bar)
 
 ;; close help screen
-(setq inhibit-splash-screen 1)
-
-;; indenet mode
-(electric-indent-mode -1)
+(setq inhibit-splash-screen t)
 
 ;; theme settings
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
@@ -47,13 +53,21 @@
 (global-set-key (kbd "<f2>") 'open-init-file)
 
 ;; company-mode glbal settings
-(global-company-mode 1)
+(global-company-mode t)
 
 ;; close backup-files settings
 (setq make-backup-files nil)
 
-;; highlight current line
-(global-hl-line-mode 1)
+(require 'recentf)
+(recentf-mode t)
+(setq recentf-max-menu-items 25)
+(global-set-key "\C-x\ \C-r" 'recentf-open-files)
+
+;; default fullscreen
+(setq initial-frame-alist (quote ((fullscreen . maximized))))
+
+;; show paren mode
+(add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 
 ;; enable evil
 (require 'evil)
@@ -63,15 +77,3 @@
 (setq inferior-lisp-program "/usr/local/bin/sbcl")
 (setq slime-contribs '(slime-fancy))
 (require 'slime-autoloads)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages '(use-package slime magit evil dracula-theme company)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
