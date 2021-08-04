@@ -16,9 +16,10 @@
 			  slime
 			  ;; --- Auto-completion ---
 			  company
-			  smex
+			  ;;smex
 			  swiper
 			  counsel
+			  smartparens
 			  ;; --- Better Editor ---
 			  hungry-delete
 			  ;; --- Themes ---
@@ -95,8 +96,8 @@
 (global-hungry-delete-mode)
 
 ;; smex settings
-(require 'smex)
-(smex-initialize)
+;;(require 'smex)
+;;(smex-initialize)
 ;;(global-set-key (kbd "M-x") 'smex)
 
 ;; swiper ivy settings
@@ -119,6 +120,11 @@
 (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
 (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
 
+;; smartparens settings
+(require 'smartparens-config)
+;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
+(smartparens-global-mode t)
+
 ;; enable evil
 (require 'evil)
 (evil-mode 1)
@@ -127,3 +133,17 @@
 (setq inferior-lisp-program "/usr/local/bin/sbcl")
 (setq slime-contribs '(slime-fancy))
 (require 'slime-autoloads)
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(company-idle-delay 0.07)
+ '(company-minimum-prefix-length 1))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
