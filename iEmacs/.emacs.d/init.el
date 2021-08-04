@@ -1,11 +1,6 @@
 ; -*- coding: utf-8; lexical-binding: t; -*-
 
 ;; set package-archives mirrors
-;;(require 'package)
-;;(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-;;(add-to-list 'package-archives '(("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-				 ;;("gnu" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
-				 ;;("org" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")) t)
 (setq package-archives '(("melpa" . "http://mirrors.bfsu.edu.cn/elpa/melpa/")
                          ("gnu" . "http://mirrors.bfsu.edu.cn/elpa/gnu/")
                          ("org" . "http://mirrors.bfsu.edu.cn/elpa/org/")))
@@ -13,6 +8,7 @@
 (setq package-check-signature nil)
 
 (require 'package)
+
 ;; initialize the packages, avoiding a re-initialization
 (unless (bound-and-true-p package--initialized) ;; To avoid warnings on 27
   (setq package-enable-at-startup nil)
@@ -25,8 +21,6 @@
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
-;;(package-initialize)
-;;(package-refresh-contents)
 
 ;; show line number
 (global-linum-mode 1)
