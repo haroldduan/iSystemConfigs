@@ -20,6 +20,7 @@
 			  swiper
 			  counsel
 			  smartparens
+			  exec-path-from-shell
 			  ;; --- Better Editor ---
 			  hungry-delete
 			  ;; --- Themes ---
@@ -41,8 +42,8 @@
 	 (package-install pkg))))
 
 ;; Find Executable Path on OS X
-;; (when (memq window-system '(mac ns))
-   ;;(exec-path-from-shell-initialize))
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
 
 ;; tool bar close
 (tool-bar-mode -1)
