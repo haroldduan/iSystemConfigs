@@ -1,26 +1,44 @@
 ; -*- coding: utf-8; lexical-binding: t; -*-
 
-;; set package-archives mirrors
-(setq package-archives '(("melpa" . "http://mirrors.bfsu.edu.cn/elpa/melpa/")
-			 ("gnu" . "http://mirrors.bfsu.edu.cn/elpa/gnu/")
-                         ("org" . "http://mirrors.bfsu.edu.cn/elpa/org/")))
+(when (>= emacs-major-version 24)
+     (require 'package)
+     (package-initialize)
+     (setq package-archives '(("melpa" . "http://mirrors.bfsu.edu.cn/elpa/melpa/")
+			      ("gnu" . "http://mirrors.bfsu.edu.cn/elpa/gnu/")
+			      ("org" . "http://mirrors.bfsu.edu.cn/elpa/org/"))))
 
-(setq package-check-signature nil)
+;; cl - Common Lisp Extension
+(require 'cl)
 
-(require 'package)
+ ;; Add Packages
+(defvar harold/packages '(
+			  evil
+			  slime
+			  ;; --- Auto-completion ---
+			  company
+			  ;; --- Better Editor ---
+			  hungry-delete
+			  ;; --- Themes ---
+			  dracula-theme
+			  ) "Default packages")
 
-;; initialize the packages, avoiding a re-initialization
-(unless (bound-and-true-p package--initialized) ;; To avoid warnings on 27
-  (setq package-enable-at-startup nil)
-  (package-initialize))
+ (setq package-selected-packages harold/packages)
 
-(unless package-archive-contents
-  (package-refresh-contents))
+ (defun harold/packages-installed-p ()
+     (loop for pkg in harold/packages
+	   when (not (package-installed-p pkg)) do (return nil)
+	   finally (return t)))
 
-;; settings for use-package package
-(unless (package-installed-p 'use-package)
-  (package-refresh-contents)
-  (package-install 'use-package))
+ (unless (harold/packages-installed-p)
+     (message "%s" "Refreshing package database...")
+     (package-refresh-contents)
+     (dolist (pkg harold/packages)
+       (when (not (package-installed-p pkg))
+	 (package-install pkg))))
+
+;; Find Executable Path on OS X
+;; (when (memq window-system '(mac ns))
+   ;;(exec-path-from-shell-initialize))
 
 ;; tool bar close
 (tool-bar-mode -1)
