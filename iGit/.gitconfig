@@ -8,6 +8,7 @@
 	interactive = auto
 [alias]
 	g = git
+	cl = clone
 	lg = log
 	xlg = lg --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 	st = status
